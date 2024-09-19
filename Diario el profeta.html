@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diario El Profeta</title>
+    <nav>
+        <ul>
+            <li><a href="ultimas-noticias.html">Últimas Noticias</a></li>
+            <li><a href="musica.html">Música</a>
+                <ul>
+                    <li><a href="musica-pop.html">Pop</a></li>
+                    <li><a href="musica-rock.html">Rock</a></li>
+                    <li><a href="musica-jazz.html">Jazz</a></li>
+                </ul>
+            </li>
+            <li><a href="Videojuegos.html">Videojuegos</a></li>
+            <li><a href="deportes.html">Deportes</a></li>
+            <li><a href="clima.html">Clima</a></li>
+            <li><a href="politica.html">Política</a></li>
+            <li><a href="economia.html">Economía</a></li>
+            <li><a href="cultura.html">Cultura</a></li>
+            <li><a href="ciencia.html">Ciencia</a></li>
+            <li><a href="tecnologia.html">Tecnología</a></li>
+        </ul>
+    </nav>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            position: sticky;
+            top: 70px;
+            z-index: 999;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        nav ul li a:hover,
+        nav ul li:hover > a {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #555;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            width: 200px;
+        }
+
+        .hero-section {
+            background-image: url('https://via.placeholder.com/1920x400'); /* Cambia la imagen por una de tu preferencia */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero-section h2 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        .news-snippet {
+            background-color: white;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: inline-block;
+            width: 45%;
+        }
+
+        .news-snippet:hover {
+            transform: scale(1.05);
+        }
+
+        .news-snippet h3 {
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .breaking-news {
+            background-color: #e74c3c;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            animation: flash 1.5s infinite alternate;
+        }
+
+        @keyframes flash {
+            from { opacity: 1; }
+            to { opacity: 0.5; }
+        }
+
+        @media (max-width: 768px) {
+            .news-snippet {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Diario El Profeta</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#">Últimas Noticias</a></li>
+        <li><a href="#">Música</a>
+            <ul>
+                <li><a href="#">Pop</a></li>
+                <li><a href="#">Rock</a></li>
+                <li><a href="#">Jazz</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Videojuegos</a></li>
+        <li><a href="#">Deportes</a></li>
+        <li><a href="#">Clima</a></li>
+        <li><a href="#">Política</a></li>
+        <li><a href="#">Economía</a></li>
+        <li><a href="#">Cultura</a></li>
+        <li><a href="#">Ciencia</a></li>
+        <li><a href="#">Tecnología</a></li>
+    </ul>
+</nav>
+
+<div class="hero-section">
+    <h2>Bienvenido a Diario El Profeta</h2>
+    <p>Tu fuente de información confiable y actualizada</p>
+</div>
+
+<div class="breaking-news">
+    <p>🔴 Última hora: El mercado bursátil sufre una caída inesperada</p>
+</div>
+
+<section class="main-content">
+    <article class="news-snippet">
+        <h3>Título de Noticia Relevante 1</h3>
+        <p>Breve descripción de la noticia relevante. Lee más sobre el tema y entérate de los últimos detalles.</p>
+    </article>
+
+    <article class="news-snippet">
+        <h3>Título de Noticia Relevante 2</h3>
+        <p>Breve descripción de otra noticia importante. Accede para conocer el desarrollo completo.</p>
+    </article>
+
+    <article class="news-snippet">
+        <h3>Título de Noticia Relevante 3</h3>
+        <p>Otro fragmento de una noticia de gran interés. Haz clic para ver más información.</p>
+    </article>
+
+    <article class="news-snippet">
+        <h3>Título de Noticia Relevante 4</h3>
+        <p>Fragmento de una noticia destacada. No te pierdas lo último de este acontecimiento.</p>
+    </article>
+</section>
+
+<footer>
+    <p>&copy; 2024 Diario El Profeta. Todos los derechos reservados.</p>
+    <p><a href="#">Términos y Condiciones</a> | <a href="#">Política de Privacidad</a></p>
+</footer>
+
+<script>
+    // Menú desplegable en la barra de navegación
+    const menuItems = document.querySelectorAll('nav ul li');
+    menuItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            item.querySelector('ul')?.classList.add('show');
+        });
+        item.addEventListener('mouseleave', () => {
+            item.querySelector('ul')?.classList.remove('show');
+        });
+    });
+
+    // Fecha en el pie de página
+    document.addEventListener('DOMContentLoaded', function () {
+        const today = new Date();
+        const footer = document.querySelector('footer p');
+        footer.innerHTML += ' | Fecha: ' + today.toLocaleDateString();
+    });
+</script>
+
+</body>
+</html>
